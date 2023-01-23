@@ -1,8 +1,17 @@
+import { Link } from 'react-router-dom';
 import Author from '../author/Author';
 import './Book.css';
 
 function Book({
-  book: { title, total_pages: totalPages, rating, isbn, published_date: publishedDate, authors },
+  book: {
+    book_id,
+    title,
+    total_pages: totalPages,
+    rating,
+    isbn,
+    published_date: publishedDate,
+    authors,
+  },
   showDetail = false,
 }) {
   return (
@@ -19,8 +28,10 @@ function Book({
           <p>ISBN: {isbn}</p>
           <p>Published {publishedDate}</p>
           <p>{totalPages} pages</p>
+          <Link to="/books">Back</Link>
         </>
       )}
+      {showDetail || <Link to={`/books/${book_id}`}>Details</Link>}
     </article>
   );
 }
