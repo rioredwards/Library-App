@@ -9,5 +9,5 @@ it('renders a welcome message when signed out', async () => {
     </MemoryRouter>
   );
 
-  await screen.findByText('Library Catalog');
+  await screen.findByText('Library CAT-alog');
 });
