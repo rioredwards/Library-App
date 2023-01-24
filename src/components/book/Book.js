@@ -28,10 +28,16 @@ function Book({
           <p>ISBN: {isbn}</p>
           <p>Published {publishedDate}</p>
           <p>{totalPages} pages</p>
-          <Link to="/books">Back</Link>
+          <Link className="purpleLink" to="/books">
+            Back
+          </Link>
         </>
       )}
-      {showDetail || <Link to={`/books/${book_id}`}>Details</Link>}
+      {showDetail || (
+        <Link className="purpleLink" to={`/books/${book_id}`}>
+          Details
+        </Link>
+      )}
     </article>
   );
 }
