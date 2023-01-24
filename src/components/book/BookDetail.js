@@ -1,5 +1,5 @@
 import Book from './Book';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useBookDetail } from '../../hooks/useBookDetail';
 
 function BookDetail() {
@@ -15,7 +15,15 @@ function BookDetail() {
 
   if (loading) return <h3>Loading book...</h3>;
 
-  return <Book book={book} book_id={id} showDetail />;
+  return (
+    <>
+      <Link className="green-link" to="/books">
+        {'<< Back To CAT-alog'}
+      </Link>
+      <hr></hr>
+      <Book book={book} book_id={id} showDetail />
+    </>
+  );
 }
 
 export default BookDetail;

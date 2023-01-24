@@ -5,9 +5,10 @@ function Home() {
     <div>
       <p>Welcome to the cool book library for cool cats 🐈</p>
       <br></br>
-      <Link className="greenLink" to="/books">
+      <Link className="green-link" to="/books">
         Go to our CAT-alog
       </Link>
+      <hr></hr>
     </div>
   );
 }

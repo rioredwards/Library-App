@@ -8,10 +8,14 @@ body {
   padding: 1rem 2rem;
 }
 
-.greenLink {
+.green-link {
   color: rgb(0, 255, 21);
 }
 
-.purpleLink {
+.purple-link {
   color: rgb(144, 24, 243);
+}
+
+hr {
+  color: rgb(0, 255, 21);
 }
